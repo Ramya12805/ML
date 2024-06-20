@@ -1,3 +1,4 @@
 node_modules/
 .vscode/
 *.log
+NumPy/__pycache__/numpy.cpython-312.pyc
