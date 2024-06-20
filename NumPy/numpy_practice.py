@@ -124,3 +124,57 @@ print(np.cos(array_2))
 
 # Linear algebra
 
+#matrix multiplication
+array_3=np.ones((2,3))
+array_b=np.full((3,2),2)
+
+print(np.matmul(array_3,array_b))
+
+#finding the determinant
+c=np.identity(3)
+print(np.linalg.det(c))
+
+
+#Statistics
+stats=np.array([[1,2,3],[4,5,6]])
+print(np.min(stats,axis=1))
+print(np.min(stats))
+print(np.max(stats,axis=0))
+print(np.sum(stats,axis=0))
+
+
+#Reorganizing arrays
+before=np.array([[1,2,3,4],[5,6,7,8]])
+print(before)
+
+after=before.reshape((4,2))
+print(after)
+
+#vertically stacking
+v1=np.array([1,2,3,4])
+v2=np.array([5,6,7,8])
+print(np.vstack([v1,v2,v1,v2]))
+
+#Horizantal stacking
+h1=np.ones((2,4))
+h2=np.zeros((2,2))
+print(np.hstack([h1,h2]))
+
+
+#Miscellaneous
+
+#loading data from file
+filedata=np.genfromtxt('data.txt',delimiter=',')
+print(filedata)
+print(filedata.astype('int32'))
+
+#Boolean Maskilng and Advanced Indexing
+
+print(filedata>50)
+print(filedata[filedata>50])
+
+print(np.any(filedata>50,axis=0))
+print(np.any(filedata>50,axis=1))
+
+print((filedata>50) & (filedata<100))
+print(~((filedata>50) & (filedata<100)))
