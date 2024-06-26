@@ -10,12 +10,21 @@ data.head(-5)
 data.tail(-5)
 
 # 3. Find Shape of Our Dataset (Number of Rows And Number of Columns)
+data.shape()
+print("Number of rows ",data.shape[0])
+print("Number of columns ",data.shape[1])
 
 # 4. Get Information About Our Dataset Like Total Number Rows, Total Number of Columns, Datatypes of Each Column And Memory Requirement
+data.info()
 
 # 5. Get Overall Statistics About The Dataframe
+pd.options.display.float_format='{:.2f}'.format
+data.describe()
+data.describe(include='all')
 
 # 6. Data Cleaning  (Replace '--'  to NaN)
+import numpy as np
+data.replace('--',np.nan,regex=True)
 
 # 7. Check Null Values In The Dataset
 
