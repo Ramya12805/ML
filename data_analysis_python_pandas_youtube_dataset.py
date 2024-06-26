@@ -78,3 +78,6 @@ sns.barplot(x='Grade',y='Subscribers',data=data)
 
 # 17. Which Grade Has The Highest Video Views? 
 sns.barplot(x='Grade',y='Video views',data=data)
+
+#For the questions 14-17 we can also solve with this
+data.groupby('Grade').mean()
